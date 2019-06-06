@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        form: es el ingreso de informacion del usuario al servidor
+
+        CONTROLES DE FORMULARIO
+        input + select+ textarea + button + fieldset
+        
+        label + lengend + option
+    -->
+    <form>
+        <div>
+                <label for="nombre">Nombre</label>
+                <input type="text" placeholder="Ingresar nombre..." id="nombre">
+        </div>
+
+        <div>
+            <label for="edad">Edad</label>
+            <input type="number" placeholder="ingrese su edad..." id="edad"></div>
+        <div>
+                <label for="email">Email</label>
+                <input type="email" placeholder="ingrese su email..." id="email">
+        </div>
+
+        <div>
+                 <label for="password">Contraseña</label>
+                 <input type="password" placeholder="Ingrese su contraseña..." id="password">
+        </div>
+        <div>
+                <label for="nacionalidad">Nacionalidad</label>
+                <select id="nacaionalidad">
+                    <option value="0">Eligen una opción</option>
+                    <option value="ar">Argentina</option>
+                    <option value="ve">Venezolana</option>
+                    <option value="ch">China</option>
+                </select>
+        </div>
+        
+        <div>
+                <label for="comentarios">Comentarios</label>
+                <textarea id="comentarios"></textarea>
+        </div>
+
+        <div>
+                <label for="masc">Masculino</label>
+                <input type="radio" id="masc" name="genero">
+                <label for="fem">Femenino</label>
+                <input type="radio" id="fem" name="genero">
+        </div>
+
+        <div>
+                <label for="tou">Acepto terminos y condiciones</label>
+                <input type="checkbox" id="tou">
+
+        </div>
+
+     <input type="submit" value="enviar">
+
+        
+        <!--<button>Enviar</button>-->
+    </form>
+    
+    <script src="formularios.js"></script>
+</body>
+</html>
