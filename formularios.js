@@ -17,7 +17,7 @@ let input = document.querySelector("input")
 
  //1)
  let select = document.querySelector("select")
-
+ let divNac = document.querySelector("div")
  //2)
  select.addEventListener("change",mostrarProv)
  function mostrarProv(){
@@ -27,15 +27,31 @@ let input = document.querySelector("input")
      //4) 
     // primero si funka console.log(paises[valor])
     let provincias = paises[valor]
-    //5)
+    //5)TRUE ó {FALSE |0| "" |NULL|undefined}
+    if (provincias) {
+        let select_nuevo = document.createElement("select")
 
-    if (paises = ar) {
-        paises = ar
+        //6
+        for (let i = 0; i < provincias.length ; i++) {
+            let option = document.createElement("option")
+            option.innerText = provincias [i]            
+            //8
+            select_nuevo.appendChild(option)
+        }
+        //document.body.appendchild(select_nuevo)
+        divNac.appendChild(select_nuevo)
     } else {
-        paises = ve
+        let p = document.createElement("p")
+        p.innerText = "Tiene que seleccionar una opción"
+        // esta es una opcion 
+        p.style.color = "red"
+        //le creamos un classname y con el list le asignamos un atributo a ese classname.
+        p.className = "error"
+        p.classList.add("error")
+        //tambien se puede resolver atribuyendole un class name pero anexandolo al body
+        //p.appendchild
+        
     }
-    console.log(paises[valor])
-
 
 
  let paises = {
